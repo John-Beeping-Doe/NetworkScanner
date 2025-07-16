@@ -1,110 +1,69 @@
-Here’s an **updated README.md** for your new Rust + Dioxus version of the NetworkScanner project.
-This is clear, direct, and accurate for a Dioxus desktop or web app, and includes Rust-focused setup and instructions.
+# Network Scanner - Architecture & UI Design
+
+## Version 1: Core Features
+
+- **Integrated Tools (v1):**
+  - Ping
+  - Traceroute
+  - DNS Lookup
+  - Port Scan
+  - Subnet Sweep
+  - ARP Scan
+
+- **Typical User Flow:**
+  1. Select tool from sidebar.
+  2. Input target IP or domain.
+  3. Start scan.
+  4. View results (live as they stream in).
+
+- **Simultaneous Scans:**  
+  - The application must support running many tools and scans in parallel.
+  - Scans and queries should be able to run simultaneously (not queued unless technically required).
+
+- **Results & Data Display:**
+  - All standard outputs for each tool (see tool specs).
+  - Color-coding and clear, modern layout are priorities.
+  - Live, real-time updates as results are received.
+  - Ability to save, filter, and export results for any scan.
+
+- **Navigation & Layout:**
+  - **Side panel** for selecting tools.
+  - **Split-screen main workspace**: tool input/config on left, results on right.
+  - **Live updates** in results panel.
+  - Color coding is key for clarity (success, warnings, errors, open/closed ports, etc.).
+  - Dark/light mode: use whatever is easiest or default (no strong preference).
+
+- **User Preferences & Config:**  
+  - None for v1 (minimal config).
+
+- **Target Platform:**  
+  - Cross-platform native app (Windows, Mac, Linux) using Dioxus Desktop.
+  - No web version (native only).
 
 ---
 
-````markdown
-# NetworkScanner
+## Version 2: Planned Enhancements
 
-A modern dashboard for network scanning and diagnostics, built with **Rust** and **Dioxus**.
-
-This project provides a cross-platform (Linux, macOS, Windows) GUI for running common network utilities (ping, traceroute, DNS lookup, and more), with results displayed in real time.
-
----
-
-## Features
-
-- Run network tools (ping, traceroute, DNS lookup, etc.) from the app
-- Live output streaming and logs
-- Modern, responsive UI with Dioxus (Rust UI framework)
-- Modular architecture for easy addition of new tools
-- Fast and secure: written entirely in Rust
+- **Advanced Features:**
+  - Real-time output/log export.
+  - Scan scheduling.
+  - System notifications.
+  - Device fingerprinting.
+  - Persistent scan history.
 
 ---
 
-## Getting Started
+## Design Notes
 
-### Prerequisites
+- **User Experience:**  
+  - Fast, clean, easy to use—no unnecessary steps.
+  - Everything should be color-coded and visually clear.
+  - Focus on running multiple scans/queries at once with no conflicts.
+  - Responsive layout with split panels for maximum information density.
 
-- **Rust toolchain** (rustc, cargo)
-- [Dioxus CLI](https://dioxuslabs.com/guide/en/cli/)  
-- Linux, macOS, or Windows
-
-### Installation
-
-#### 1. Install Rust
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-rustc --version
-````
-
-#### 2. Install Build Tools (Linux)
-
-```bash
-sudo apt update
-sudo apt install build-essential pkg-config libssl-dev
-```
-
-#### 3. Install Dioxus CLI
-
-```bash
-cargo install dioxus-cli
-```
-
-#### 4. Clone the Repository
-
-```bash
-git clone https://github.com/John-Beeping-Doe/NetworkScanner-Rust.git
-cd NetworkScanner-Rust/network_dashboard
-```
-
-#### 5. Run the App (Desktop)
-
-```bash
-dioxus serve --desktop
-```
-
-*For web target, use `dioxus serve --web` instead.*
+- **Tech Stack:**  
+  - [x] Rust for all logic, networking, and UI via Dioxus Desktop.
 
 ---
 
-## Project Structure
-
-```
-network_dashboard/
-  ├── src/              # Rust source files
-  ├── public/           # Static assets
-  ├── Cargo.toml        # Rust project manifest
-  ├── README.md
-  ├── LICENSE
-  └── .gitignore
-```
-
----
-
-## Contributing
-
-Contributions welcome!
-Please open an issue or submit a pull request for feature suggestions or bug fixes.
-
----
-
-## License
-
-This project is licensed under the MIT License.
-See the [LICENSE](LICENSE) file for details.
-
----
-
-## Author
-
-Joshua Wood
-
-```
-
----
-
-**Let me know if you want any changes, want to specify Dioxus desktop vs web, or want a more detailed usage section!**
-```
+*This file serves as the canonical source for UI and feature requirements. Update as project evolves.*
