@@ -1,0 +1,12 @@
+/Code/network-dashboard/target/debug/deps/tray_icon-99c1ab6280c2e80c.d: /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/lib.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/counter.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/error.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/icon.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/gtk/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/gtk/icon.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/tray_icon_id.rs
+
+/Code/network-dashboard/target/debug/deps/libtray_icon-99c1ab6280c2e80c.rmeta: /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/lib.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/counter.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/error.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/icon.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/gtk/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/gtk/icon.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/tray_icon_id.rs
+
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/lib.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/counter.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/error.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/icon.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/mod.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/gtk/mod.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/platform_impl/gtk/icon.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tray-icon-0.19.3/src/tray_icon_id.rs:

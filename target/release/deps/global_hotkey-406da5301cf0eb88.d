@@ -1,0 +1,11 @@
+/Code/network-dashboard/target/release/deps/global_hotkey-406da5301cf0eb88.d: /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/lib.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/error.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/hotkey.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/x11/mod.rs
+
+/Code/network-dashboard/target/release/deps/libglobal_hotkey-406da5301cf0eb88.rlib: /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/lib.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/error.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/hotkey.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/x11/mod.rs
+
+/Code/network-dashboard/target/release/deps/libglobal_hotkey-406da5301cf0eb88.rmeta: /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/lib.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/error.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/hotkey.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/mod.rs /home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/x11/mod.rs
+
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/lib.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/error.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/hotkey.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/mod.rs:
+/home/dev/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/global-hotkey-0.5.5/src/platform_impl/x11/mod.rs:
