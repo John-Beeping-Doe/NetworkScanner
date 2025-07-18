@@ -9,9 +9,11 @@ pub struct PingResult {
     pub ok: bool,
     pub rtt_ms: Option<u128>,
     pub err: Option<String>,
+    pub timestamp: Option<std::time::SystemTime>,
+    pub seq: usize,
 }
 
-pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
+pub async fn ping_task(addr: String, tx: Sender<PingResult>, mut seq: usize) {
     loop {
         let output = if cfg!(target_os = "windows") {
             tokio::process::Command::new("ping")
@@ -28,12 +30,16 @@ pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
                 .output()
                 .await
         };
+
         let mut result = PingResult {
             addr: addr.clone(),
             ok: false,
             rtt_ms: None,
             err: None,
+            timestamp: Some(std::time::SystemTime::now()),
+            seq,
         };
+
         match output {
             Ok(out) if out.status.success() => {
                 result.ok = true;
@@ -47,7 +53,9 @@ pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
                 result.err = Some(format!("Failed to start ping: {e}"));
             }
         }
+
         let _ = tx.send(result).await;
+        seq += 1;
         tokio::time::sleep(std::time::Duration::from_secs(1)).await;
     }
 }
@@ -56,7 +64,7 @@ fn parse_rtt_ms(output: &str) -> Option<u128> {
     if cfg!(target_os = "windows") {
         output.lines().find_map(|line| {
             if line.contains("Average =") {
-                line.split('=').last()?.trim().replace("ms", "").parse().ok()
+                line.split('=').next_back()?.trim().replace("ms", "").parse().ok()
             } else {
                 None
             }

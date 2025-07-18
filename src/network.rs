@@ -1,5 +1,3 @@
-// src/network.rs
-
 use tokio::sync::mpsc::Sender;
 use std::process::Stdio;
 
@@ -9,13 +7,15 @@ pub struct PingResult {
     pub ok: bool,
     pub rtt_ms: Option<u128>,
     pub err: Option<String>,
+    pub timestamp: Option<std::time::SystemTime>,
+    pub seq: usize,
 }
 
 // Spawns system ping command once per second and sends result via channel
 pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
+    let mut seq = 0;
     loop {
         let output = if cfg!(target_os = "windows") {
-            // Windows: -n 1 means 1 echo request
             tokio::process::Command::new("ping")
                 .arg("-n").arg("1")
                 .arg(&addr)
@@ -23,7 +23,6 @@ pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
                 .output()
                 .await
         } else {
-            // Linux/Mac: -c 1 means 1 echo request
             tokio::process::Command::new("ping")
                 .arg("-c").arg("1")
                 .arg(&addr)
@@ -37,6 +36,8 @@ pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
             ok: false,
             rtt_ms: None,
             err: None,
+            timestamp: Some(std::time::SystemTime::now()),
+            seq, // <-- THIS FIELD ADDED!
         };
 
         match output {
@@ -54,6 +55,7 @@ pub async fn ping_task(addr: String, tx: Sender<PingResult>) {
         }
 
         let _ = tx.send(result).await;
+        seq += 1;
         tokio::time::sleep(std::time::Duration::from_secs(1)).await;
     }
 }
@@ -64,7 +66,8 @@ fn parse_rtt_ms(output: &str) -> Option<u128> {
         // Look for "Average = 12ms"
         output.lines().find_map(|line| {
             if line.contains("Average =") {
-                line.split('=').last()?.trim().replace("ms", "").parse().ok()
+                // Use next_back() instead of last() to silence clippy warning!
+                line.split('=').next_back()?.trim().replace("ms", "").parse().ok()
             } else {
                 None
             }
