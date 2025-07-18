@@ -1,0 +1,13 @@
+
+# VSCode/
+.vscode/
+# IDEs
+.idea/
+# Binaries
+*.exe
+*.dll
+*.so
+*.dylib
+# Build
+/target
+run_checks
