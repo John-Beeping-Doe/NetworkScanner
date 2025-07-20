@@ -3,18 +3,13 @@ name = "network_scanner"
 version = "0.1.0"
 edition = "2021"
 authors = ["John-Beeping-Doe"]
-description = "A fast, cross-platform TUI network dashboard in Rust using Ratatui."
+description = "A fast, cross-platform network dashboard in Rust using Dioxus."
 repository = "https://github.com/John-Beeping-Doe/NetworkScanner"
 
 [dependencies]
-ratatui = "0.29.0"
-crossterm = "0.29.0"
-tokio = { version = "1.41", features = ["full"] }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
+dioxus = "0.5.6"
+dioxus-desktop = "0.5.6"
+tokio = { version = "1.46.1", features = ["full"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.141"
 chrono = "0.4"
-
-[profile.release]
-opt-level = "z"
-strip = true
-lto = true
